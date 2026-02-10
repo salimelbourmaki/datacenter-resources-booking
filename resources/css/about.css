@@ -165,6 +165,61 @@
     overflow: hidden;
     margin-bottom: 20px;
     background: #f1f5f9;
+    position: relative;
+    padding: 3px;
+    /* Space for the LED border */
+}
+
+/* --- LED BORDER ANIMATION (TIGER ORANGE) --- */
+.led-border {
+    padding: 3px;
+    background: var(--bg-card);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.led-border::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent,
+            transparent,
+            transparent,
+            #fb8c00
+            /* Tiger Orange */
+        );
+    animation: rotate-led 4s linear infinite;
+    z-index: -2;
+}
+
+.led-border::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: var(--bg-card);
+    border-radius: calc(var(--radius-md) - 3px);
+    z-index: -1;
+}
+
+@keyframes rotate-led {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Glow effect */
+.led-border::before {
+    filter: blur(8px);
+    opacity: 0.8;
+}
+
+/* Base border (sharper) */
+.led-border::after {
+    border: 1px solid rgba(251, 140, 0, 0.1);
 }
 
 .team-image-wrapper img {
