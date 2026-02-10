@@ -64,7 +64,7 @@
                 </div>
                 <h3 class="member-name">El Bourmaki Salim</h3>
                 <p class="member-role admin-role">Administrateur Système</p>
-                <a href="mailto:salim@datacenter.com" class="btn btn-outline btn-contact">
+                <a href="mailto:salim@datacenter.com" class="btn btn-outline btn-contact led-border">
                     <i class="far fa-envelope"></i> Contacter Salim
                 </a>
             </div>

@@ -172,20 +172,19 @@
 
 /* --- LED BORDER ANIMATION (TIGER ORANGE) --- */
 .led-border {
-    padding: 3px;
-    background: var(--bg-card);
     position: relative;
     z-index: 1;
     overflow: hidden;
+    padding: 3px;
 }
 
 .led-border::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    top: -150%;
+    left: -150%;
+    width: 400%;
+    height: 400%;
     background: conic-gradient(transparent,
             transparent,
             transparent,
@@ -194,15 +193,18 @@
         );
     animation: rotate-led 4s linear infinite;
     z-index: -2;
+    filter: blur(8px);
+    opacity: 0.9;
 }
 
 .led-border::after {
     content: '';
     position: absolute;
-    inset: 3px;
-    background: var(--bg-card);
-    border-radius: calc(var(--radius-md) - 3px);
+    inset: 2px;
+    background: inherit;
+    border-radius: inherit;
     z-index: -1;
+    border: 1px solid rgba(251, 140, 0, 0.15);
 }
 
 @keyframes rotate-led {
@@ -211,15 +213,14 @@
     }
 }
 
-/* Glow effect */
-.led-border::before {
-    filter: blur(8px);
-    opacity: 0.8;
+/* Specific adjustment for buttons (inherits white background) */
+.btn-contact.led-border {
+    border: none;
+    background: white !important;
 }
 
-/* Base border (sharper) */
-.led-border::after {
-    border: 1px solid rgba(251, 140, 0, 0.1);
+.btn-contact.led-border::after {
+    inset: 1px;
 }
 
 .team-image-wrapper img {
