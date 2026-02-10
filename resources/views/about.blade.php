@@ -59,7 +59,7 @@
         <div class="card team-member-card">
             <div class="card-body member-info">
                 <div class="team-image-wrapper">
-                    <img src="{{ asset('images/team/salim.png') }}" alt="El Bourmaki Salim"
+                    <img src="{{ asset('images/developer/salim.png') }}" alt="El Bourmaki Salim"
                         onerror="this.src='https://ui-avatars.com/api/?name=Salim+El+Bourmaki&background=0284c7&color=fff'">
                 </div>
                 <h3 class="member-name">El Bourmaki Salim</h3>
