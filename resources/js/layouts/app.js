@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.theme = newTheme;
         updateIcon();
 
-        console.log('Theme changed to:', newTheme);
+        // console.log('Theme changed to:', newTheme);
     });
 });

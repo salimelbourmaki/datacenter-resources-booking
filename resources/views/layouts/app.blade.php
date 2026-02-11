@@ -24,17 +24,7 @@
             <!-- Logo & Brand -->
             <a href="{{ auth()->check() && auth()->user()->role === 'admin' ? route('admin.dashboard') : route('dashboard') }}"
                 class="navbar-brand">
-                <span class="navbar-logo navbar-logo-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px;">
-                        <path d="M4 6C4 4.89543 4.89543 4 6 4H18C19.1046 4 20 4.89543 20 6V10C20 11.1046 19.1046 12 18 12H6C4.89543 12 4 11.1046 4 10V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        <path d="M4 14C4 12.8954 4.89543 12 6 12H18C19.1046 12 20 12.8954 20 14V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
-                        <circle cx="8" cy="16" r="1.5" fill="currentColor"/>
-                        <path d="M12 8H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M12 16H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </span>
-                <span class="navbar-title">DC-<span>Manager</span></span>
+                <img src="{{ asset('images/dclogo.png') }}" alt="Logo DC-Manager" class="navbar-logo">
             </a>
 
             <!-- Navigation Links -->

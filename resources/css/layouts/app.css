@@ -272,13 +272,18 @@ body {
     color: var(--primary);
 }
 
-/* Navigation Links */
+/* Navigation Links - Centered */
 .navbar-nav {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: center;
-    margin: 0 auto 0 2rem;
+    margin: 0 auto;
+    /* Centers the nav */
+    position: absolute;
+    /* Ensures true center relative to parent */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .navbar-nav a {

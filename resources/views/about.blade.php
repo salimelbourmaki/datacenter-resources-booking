@@ -58,13 +58,15 @@
     <div class="admin-wrapper">
         <div class="card team-member-card">
             <div class="card-body member-info">
-                <div class="team-image-wrapper led-border">
+                <div class="team-image-wrapper led-container" id="portraitWrapper">
+                    <canvas id="ledCanvas" class="led-canvas"></canvas>
                     <img src="{{ asset('images/developer/salim.png') }}" alt="El Bourmaki Salim"
                         onerror="this.src='https://ui-avatars.com/api/?name=Salim+El+Bourmaki&background=0284c7&color=fff'">
                 </div>
                 <h3 class="member-name">El Bourmaki Salim</h3>
                 <p class="member-role admin-role">Administrateur Système</p>
-                <a href="mailto:salim@datacenter.com" class="btn btn-outline btn-contact led-border">
+                <a href="mailto:salimelbourmaki1@gmail.com" class="btn btn-outline btn-contact led-container" id="contactBtnWrapper">
+                    <canvas id="contactLedCanvas" class="led-canvas"></canvas>
                     <i class="far fa-envelope"></i> Contacter Salim
                 </a>
             </div>
