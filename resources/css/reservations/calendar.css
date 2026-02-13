@@ -1,0 +1,85 @@
+/* resources/css/reservations/calendar.css */
+
+.calendar-container {
+    padding: 20px 0;
+}
+
+.calendar-header {
+    margin-bottom: 25px;
+}
+
+.calendar-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#calendar {
+    min-height: 600px;
+    color: var(--text-main);
+}
+
+/* Customizing FullCalendar for Dark/Light Mode */
+.fc-theme-standard td, .fc-theme-standard th {
+    border-color: var(--border-color);
+}
+
+.fc .fc-toolbar-title {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.fc .fc-button-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.fc .fc-button-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.fc .fc-daygrid-day-number {
+    color: var(--text-main);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    color: var(--text-main);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}

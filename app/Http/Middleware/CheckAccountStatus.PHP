@@ -12,7 +12,7 @@ class CheckAccountStatus
     {
         if (Auth::check() && !Auth::user()->is_active) {
             Auth::logout();
-            return redirect()->route('login')->with('error', 'Votre compte est en attente de validation par l\'administrateur.');
+            return redirect()->route('login')->withErrors(['email' => 'Votre compte est en attente de validation par l\'administrateur.']);
         }
 
         return $next($request);

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* Computer Modern Font Implementation */
 
 :root {
     /* --- COULEURS PRINCIPALES --- */
@@ -215,7 +215,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Outfit', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-primary);
     line-height: 1.6;
@@ -276,14 +276,14 @@ body {
 .navbar-nav {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     margin: 0 auto;
-    /* Centers the nav */
-    position: absolute;
-    /* Ensures true center relative to parent */
-    left: 50%;
-    transform: translateX(-50%);
+    /* Keeps it centered in available space */
+    position: relative;
+    /* Changed from absolute */
+    left: auto;
+    transform: none;
 }
 
 .navbar-nav a {
@@ -900,4 +900,29 @@ select.form-control {
     .profile-switcher {
         display: none;
     }
+}
+
+/* --- FOOTER CONTACT LINK --- */
+.footer-contact-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-contact-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+[data-theme='dark'] .footer-contact-link {
+    color: var(--primary-light);
+}
+
+[data-theme='dark'] .footer-contact-link:hover {
+    color: #fff;
 }

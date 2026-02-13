@@ -215,8 +215,29 @@
     margin-bottom: 20px;
 }
 
-.member-role.admin-role {
-    color: var(--primary);
+.member-social-links {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.social-icon {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+    transform: translateY(-4px) scale(1.1);
+}
+
+.social-icon.github:hover {
+    color: var(--text-primary);
+}
+
+.social-icon.linkedin:hover {
+    color: #0077B5;
 }
 
 .btn-contact {

@@ -89,7 +89,8 @@
 /* Reservations Grid */
 .res-grid {
     display: grid;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .res-card-item {

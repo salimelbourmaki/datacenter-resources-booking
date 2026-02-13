@@ -16,6 +16,8 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 Route::get('/catalogue', [ResourceController::class, 'index'])->name('resources.index');
+Route::get('/calendrier', [ReservationController::class, 'calendar'])->name('calendar.index');
+
 
 // La page À Propos centralise désormais tout (Règles + Équipe)
 Route::get('/a-propos', function () {

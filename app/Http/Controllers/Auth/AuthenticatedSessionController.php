@@ -35,7 +35,7 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerateToken();
 
             throw ValidationException::withMessages([
-                'email' => 'Votre compte est désactivé. Veuillez contacter l\'administrateur du Data Center.',
+                'email' => 'Votre compte est en attente de validation par l\'administrateur.',
             ]);
         }
         // ----------------------------------------------

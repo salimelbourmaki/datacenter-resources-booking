@@ -15,6 +15,21 @@ use Illuminate\Support\Facades\DB;
 class ReservationController extends Controller
 {
     /**
+     * Afficher la vue calendrier (Point 2.4 / Bonus)
+     */
+    public function calendar()
+    {
+        // On récupère les réservations validées pour l'affichage
+        $reservations = Reservation::where('status', 'Approuvée')
+            ->orWhere('status', 'Active')
+            ->with(['resource', 'user'])
+            ->get();
+
+        return view('reservations.calendar', compact('reservations'));
+    }
+
+
+    /**
      * Espace personnel : Suivre ses propres demandes (Point 2.3)
      */
     public function index(Request $request)

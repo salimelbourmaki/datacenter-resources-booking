@@ -38,7 +38,13 @@ Route::middleware('guest')->group(function () {
             abort(403, 'Ce lien de connexion est invalide ou a expiré.');
         }
 
-        \Illuminate\Support\Facades\Auth::loginUsingId($userId);
+        $user = \App\Models\User::find($userId);
+
+        if (!$user || !$user->is_active) {
+            return redirect()->route('login')->withErrors(['email' => 'Ce compte est en attente de validation ou invalide.']);
+        }
+
+        \Illuminate\Support\Facades\Auth::login($user);
         \Illuminate\Support\Facades\Cache::forget('magic_login_' . $token);
 
         return redirect()->route('dashboard')->with('success', 'Connexion automatique réussie ! Bienvenue.');

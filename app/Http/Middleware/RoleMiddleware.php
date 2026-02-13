@@ -23,7 +23,7 @@ class RoleMiddleware
         // 2. Vérification du compte actif
         if (!$user->is_active) {
             Auth::logout();
-            return redirect()->route('login')->withErrors(['email' => 'Votre compte est en attente de validation.']);
+            return redirect()->route('login')->withErrors(['email' => 'Votre compte est en attente de validation par l\'administrateur.']);
         }
 
         // 3. Normalisation et vérification

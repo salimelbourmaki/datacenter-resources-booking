@@ -10,6 +10,9 @@
     <!-- CSS -->
     @vite(['resources/css/layouts/app.css'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     @stack('styles')
 
@@ -52,6 +55,15 @@
                             <i class="fas fa-server"></i> Catalogue
                         </a>
                     </li>
+
+                    <li>
+                        <a href="{{ route('calendar.index') }}"
+                            class="{{ request()->routeIs('calendar.index') ? 'active' : '' }}">
+                            <i class="fas fa-calendar-alt"></i> Calendrier
+                        </a>
+                    </li>
+
+
 
                     <!-- GESTION (RESPONSABLE/ADMIN) -->
                     @if($currentRole === 'responsable' || $currentRole === 'admin')
@@ -219,10 +231,13 @@
 
         @yield('content')
     </main>
-
     <!-- FOOTER -->
     <footer class="main-footer">
-        <p>&copy; {{ date('Y') }} - Gestion de Ressources Data Center IDAI</p>
+        <p>&copy; {{ date('Y') }} - Gestion de Ressources Data Center <br> Created By: 
+            <a href="mailto:salimelbourmaki1@gmail.com" class="footer-contact-link" title="Me contacter par Email">
+                <i class="fas fa-envelope"></i> salimelbourmaki1@gmail.com
+            </a>
+        </p>
     </footer>
 
     <!-- Scripts -->

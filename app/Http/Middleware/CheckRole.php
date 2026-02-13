@@ -19,7 +19,7 @@ class CheckRole
         // Si le compte est désactivé, on déconnecte et on bloque
         if (!$user->is_active) {
             Auth::logout();
-            return redirect()->route('login')->withErrors(['email' => 'Votre compte est désactivé.']);
+            return redirect()->route('login')->withErrors(['email' => 'Votre compte est en attente de validation par l\'administrateur.']);
         }
 
         // Vérification du rôle
