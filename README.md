@@ -78,10 +78,17 @@ Follow these steps to get the project running on your local machine.
    ```
 
 7. **Run the Application**
+
+   #### Option A: Using Artisan (Development)
    ```bash
    php artisan serve
    ```
-   Visit `http://127.0.0.1:8000` in your browser.
+   Visit `http://127.0.0.1:8000`
+
+   #### Option B: Using XAMPP/Apache (Recommended for your setup)
+   1. Ensure the project is located in `C:\xampp\htdocs\datacenter-resources-booking`.
+   2. Start **Apache** and **MySQL** from the XAMPP Control Panel.
+   3. Visit `http://localhost/datacenter-resources-booking/public` or configure a VirtualHost for a cleaner URL like `http://dc-manager.test`.
 
 ---
 
