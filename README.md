@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20Logo%20Vertical/1%20Logo%20Vertical%20-%20Black.svg" width="100" alt="Laravel Logo">
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/2%20PNG/1%20Logo%20Primary/1%20Logo%20Primary%20-%20Red.png" width="100" alt="Laravel Logo">
   <h1>🚀 Data Center Resources Booking</h1>
   <p>A professional Laravel/PHP web application for managing reservations, allocation, and tracking of data center resources (servers, VMs, storage, networking equipment). Features role-based access control, real-time availability checking, and a comprehensive admin dashboard.</p>
 
