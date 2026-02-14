@@ -94,10 +94,9 @@ Follow these steps to get the project running on your local machine.
 
 ---
 
-## 👨‍💻 Developed By
+## 👨‍💻 Developed By:
 
-**EL BOURMAKI Salim**  
-*Ingénierie & Développement*
+**EL BOURMAKI Salim** 
 
 <div align="left">
   <a href="https://github.com/salimelbourmaki" target="_blank">
@@ -111,8 +110,3 @@ Follow these steps to get the project running on your local machine.
   </a>
 </div>
 
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
